@@ -9,8 +9,11 @@ export const SITE_CONFIG: SiteConfig = {
   siteLogo: "/eashan-small.jpg",
   navLinks: [
     { text: "About", href: "#about" },
+    { text: "Resume", href: "#resume" },
     { text: "Projects", href: "#projects" },
+    { text: "Skills", href: "#skills" },
     { text: "Experience", href: "#experience" },
+    { text: "Contact", href: "contact" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/eashanjoshi/" },
@@ -25,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Eashan M. Joshi",
     specialty: "Software Engineer",
     summary:
-      "AI-focused Software Engineer by day, fitness enthusiast by lifestyle. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised if you start moving more, learn a thing or two about dumbbells, and start tuning into the Huberman Lab podcast.",
+      "AI-focused Software Engineer by day, fitness enthusiast by lifestyle. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
     email: "example@email.com",
   },
   experience: [
@@ -89,9 +92,11 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      Hi, I’m Eashan Joshi, a driven Software Engineer and AI Researcher passionate about building intelligent, high-performance systems. With hands-on experience in developing scalable backend services, LLM-integrated applications, and cloud-native infrastructures, I specialize in creating robust tools that blend performance with innovation. From financial technology to intelligent debugging platforms, my work spans multiple domains and leverages cutting-edge frameworks like LangChain, CUDA, PySpark, and Neo4j.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+      \n\n I thrive at the intersection of AI and engineering, whether designing GPU-accelerated pipelines, deploying containerized architectures, or analyzing complex dependency graphs for open-source ecosystems. My mission is to engineer systems that are both smart and resilient.
+
+      Outside of tech, I’m an avid fitness enthusiast and endurance athlete. You’ll likely find me on Strava after a long run or exploring the latest health science podcasts to optimize both mind and body.
     `,
     image: "/eashan-big.jpg",
   },

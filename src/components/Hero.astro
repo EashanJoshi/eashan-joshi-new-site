@@ -5,24 +5,32 @@ type Props = HeroProps;
 const { name, specialty, summary, email } = Astro.props;
 ---
 
-<section class="min-h-screen flex flex-col justify-center items-center text-center" id="#hero">
+<section class="min-h-screen flex flex-col justify-start items-center text-center pt-20" id="#hero">
+  <!-- Hero Content -->
+  <div>
+    <h1 class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl">
+      {name}
+    </h1>
+    <p class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
+      {specialty}
+    </p>
+    <p class="mb-16 text-base font-normal text-neutral md:text-lg">
+      {summary}
+    </p>
+  </div>
 
-  <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
-  >
-    {name}
-  </h1>
-  <p
-    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
-  >
-    {specialty}
-  </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
-    {summary}
-  </p>
+  <!-- 2-Column Block Section -->
+  <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl px-4 mt-10">
+  <!-- LeetCode Box -->
+  <a href="https://leetcode.com/u/Lucifer71/" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gradient-to-br from-yellow-400 to-orange-500 hover:scale-105 transition-transform duration-300 text-black p-6 rounded-2xl shadow-xl">
+    <h3 class="text-2xl font-bold mb-2">LeetCode</h3>
+    <p class="text-base">Check out my solved problems and coding progress!</p>
+  </a>
 
-  <!-- <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
-  > -->
+  <!-- Strava Box -->
+  <a href="https://www.strava.com/athletes/170749275" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gradient-to-br from-orange-700 to-red-600 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl">
+    <h3 class="text-2xl font-bold mb-2">Strava</h3>
+    <p class="text-base">Track my runs, rides, and weekly training stats!</p>
+  </a>
+</div>
 </section>

@@ -5,6 +5,9 @@ import Layout from "@layouts/Layout.astro";
 import Experience from "@components/Experience.astro";
 import Projects from "@components/Projects.astro";
 import About from "@components/About.astro";
+import Resume from "@components/Resume.astro";
+import Skills from "@components/Skills.astro";
+import Contact from "@components/Contact.astro";
 
 import "../styles/global.css";
 ---
@@ -20,11 +23,23 @@ import "../styles/global.css";
   </div>
 
   <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+    <Resume resume={SITE_CONTENT.resume} />
+  </div>
+
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
     <Projects projects={SITE_CONTENT.projects} />
   </div>
 
-  <div class="mx-auto max-w-3xl px-5">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+    <Skills skills={SITE_CONTENT.skills} />
+  </div>
+
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
     <Experience experience={SITE_CONTENT.experience} />
+  </div>
+
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+    <Contact contact={SITE_CONTENT.contact} />
   </div>
 
   

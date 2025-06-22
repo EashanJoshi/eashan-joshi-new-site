@@ -26,9 +26,15 @@ importers:
       tailwindcss:
         specifier: ^4.1.1
         version: 4.1.1
+      three:
+        specifier: ^0.177.0
+        version: 0.177.0
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
+      vanta:
+        specifier: ^0.5.24
+        version: 0.5.24
     devDependencies:
       prettier:
         specifier: ^3.5.3
@@ -1599,6 +1605,9 @@ packages:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
 
+  three@0.177.0:
+    resolution: {integrity: sha512-EiXv5/qWAaGI+Vz2A+JfavwYCMdGjxVsrn3oBwllUoqYeaBO75J63ZfyaQKoiLrqNHoTlUc6PFgMXnS0kI45zg==}
+
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
@@ -1745,6 +1754,9 @@ packages:
         optional: true
       uploadthing:
         optional: true
+
+  vanta@0.5.24:
+    resolution: {integrity: sha512-fvieEbHy1ZS23zrcX+topzqAgA4Uct1enngOEWLFBgs9TtOf6RDFOYatH7KSVdrABzQDMCQ5myQy+nTSZZwLzg==}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -3777,6 +3789,8 @@ snapshots:
 
   tapable@2.2.1: {}
 
+  three@0.177.0: {}
+
   tinyexec@0.3.2: {}
 
   tinyglobby@0.2.12:
@@ -3879,6 +3893,8 @@ snapshots:
       node-fetch-native: 1.6.6
       ofetch: 1.4.1
       ufo: 1.5.4
+
+  vanta@0.5.24: {}
 
   vfile-location@5.0.3:
     dependencies:
