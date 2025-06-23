@@ -13,7 +13,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Projects", href: "#projects" },
     { text: "Skills", href: "#skills" },
     { text: "Experience", href: "#experience" },
-    { text: "Contact", href: "contact" },
+    { text: "Contact", href: "#contact" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/eashanjoshi/" },
