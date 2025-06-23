@@ -152,11 +152,11 @@ export const SITE_CONTENT: SiteContent = {
 
   about: {
     description: `
-      Hi, I’m Eashan Joshi, a driven Software Engineer and AI Researcher passionate about building intelligent, high-performance systems. With hands-on experience in developing scalable backend services, LLM-integrated applications, and cloud-native infrastructures, I specialize in creating robust tools that blend performance with innovation. From financial technology to intelligent debugging platforms, my work spans multiple domains and leverages cutting-edge frameworks like LangChain, CUDA, PySpark, and Neo4j.
+      <p> Hi, I’m Eashan Joshi, a driven Software Engineer and AI Researcher passionate about building intelligent, high-performance systems. I hold a <strong> Master’s Degree in Data Science from Rochester Institute of Technology (May 2025) and a Bachelor’s Degree in Computer Engineering from Pune Institute of Computer Technology.</strong> </p> <br />
+      <p> With hands-on experience in developing scalable backend services, LLM-integrated applications, and cloud-native infrastructures, I specialize in creating robust tools that blend performance with innovation. From financial technology to intelligent debugging platforms, my work spans multiple domains and leverages cutting-edge frameworks like LangChain, CUDA, PySpark, and Neo4j.</p><br />
 
-      \n\n I thrive at the intersection of AI and engineering, whether designing GPU-accelerated pipelines, deploying containerized architectures, or analyzing complex dependency graphs for open-source ecosystems. My mission is to engineer systems that are both smart and resilient.
+      <p> I thrive at the intersection of AI and Software Engineering, designing GPU-accelerated pipelines, deploying cloud-native systems, and analyzing open-source ecosystems. Outside of tech, I’m a fitness enthusiast and endurance athlete who trains hard and stays curious through health science podcasts.</p>
 
-      Outside of tech, I’m an avid fitness enthusiast and endurance athlete. You’ll likely find me on Strava after a long run or exploring the latest health science podcasts to optimize both mind and body.
     `,
     image: "/eashan-big.jpg",
   },
