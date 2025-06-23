@@ -17,7 +17,8 @@ const {
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = SITE_CONFIG;
 
-const ogImgUrl = canonicalURL + socialImage;
+const ogImgUrl = new URL(socialImage, SITE_CONFIG.canonicalURL).href;
+
 ---
 
 <!doctype html>
