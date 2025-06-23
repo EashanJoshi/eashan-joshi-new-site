@@ -1,0 +1,37 @@
+---
+import { onCleanup } from "solid-js";
+import { useEffect } from "react";
+import { useVisibleTask$ } from "astro/runtime/client";
+import * as THREE from "three";
+import NET from "vanta/dist/vanta.net.min";
+---
+
+<div id="vanta-bg" class="absolute inset-0 -z-10 h-screen w-full" />
+
+<script is:client>
+  let vantaEffect;
+
+  window.addEventListener("DOMContentLoaded", () => {
+    if (!vantaEffect) {
+      vantaEffect = NET({
+        el: "#vanta-bg",
+        THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3f3fff,
+        backgroundColor: 0x111122,
+        points: 15.0,
+        maxDistance: 21.0,
+      });
+    }
+  });
+
+  window.addEventListener("beforeunload", () => {
+    if (vantaEffect) vantaEffect.destroy();
+  });
+</script>

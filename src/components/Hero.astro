@@ -21,16 +21,26 @@ const { name, specialty, summary, email } = Astro.props;
 
   <!-- 2-Column Block Section -->
   <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl px-4 mt-10">
-  <!-- LeetCode Box -->
-  <a href="https://leetcode.com/u/Lucifer71/" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gradient-to-br from-yellow-400 to-orange-500 hover:scale-105 transition-transform duration-300 text-black p-6 rounded-2xl shadow-xl">
-    <h3 class="text-2xl font-bold mb-2">LeetCode</h3>
-    <p class="text-base">Check out my solved problems and coding progress!</p>
-  </a>
+    <!-- LeetCode Box -->
+    <a 
+      href="https://leetcode.com/u/Lucifer71/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="flex-1 bg-gradient-to-br from-blue-500 to-indigo-700 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl"
+    >
+      <h3 class="text-2xl font-bold mb-2">LeetCode</h3>
+      <p class="text-base">Check out my solved problems and coding progress!</p>
+    </a>
 
-  <!-- Strava Box -->
-  <a href="https://www.strava.com/athletes/170749275" target="_blank" rel="noopener noreferrer" class="flex-1 bg-gradient-to-br from-orange-700 to-red-600 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl">
-    <h3 class="text-2xl font-bold mb-2">Strava</h3>
-    <p class="text-base">Track my runs, rides, and weekly training stats!</p>
-  </a>
-</div>
+    <!-- Strava Box -->
+    <a 
+      href="https://www.strava.com/athletes/170749275" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="flex-1 bg-gradient-to-br from-sky-600 to-blue-900 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl"
+    >
+      <h3 class="text-2xl font-bold mb-2">Strava</h3>
+      <p class="text-base">Track my runs, rides, and weekly training stats!</p>
+    </a>
+  </div>
 </section>

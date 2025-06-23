@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Eashan M. Joshi",
     specialty: "Software Engineer",
     summary:
-      "AI-focused Software Engineer by day, fitness enthusiast by lifestyle. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
+      "AI-driven Software Engineer blending deep tech expertise with a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
     email: "example@email.com",
   },
   experience: [
@@ -67,29 +67,89 @@ export const SITE_CONTENT: SiteContent = {
       ],
     },
   ],
-  projects: [
-    {
-      name: "DebugMate - GenAI Software Debugging & Refactoring Assistant",
-      summary: "Engineered a GenAI-powered debugging tool using Retrieval-Augmented Generation (RAG) and prompt engineering, earning a 4.6/5 user rating and reducing bug resolution time by 40% across programming languages",
-      linkPreview: "/",
-      linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
-      image: "/spotifu.png",
-    },
-    {
-      name: "Options Pricing Models",
-      summary: "This project demonstrates the implementation of advanced option pricing models for European and American call options, incorporating real-time market data integration, sensitivity analysis, and machine learning predictions. The project is developed in Python and is aimed at providing a comprehensive tool for quantitative finance applications",
-      linkPreview: "/",
-      linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
-      image: "/shopify-clon.png",
-    },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
-    },
+ projects: [
+  {
+    name: "DebugMate - GenAI Software Debugging & Refactoring Assistant",
+    summary: "Engineered a GenAI-powered debugging tool using Retrieval-Augmented Generation (RAG) and prompt engineering, earning a 4.6/5 user rating and reducing bug resolution time by 40% across programming languages.",
+    bullets: [
+      "Built with LangChain & OpenAI",
+      "RAG-powered prompt injection",
+      "40% faster bug fixes"
+    ],
+    tech: ["Python", "LangChain", "OpenAI API", "LLMs", "RAG", "Open Source"],
+    linkPreview: "/",
+    linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
+  },
+
+  {
+  name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
+  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via OpenAI API) to generate context-aware fix suggestions and automate corrections.",
+  bullets: [
+    "Flags leakage patterns",
+    "Suggests fix strategies",
+    "v1.2: LLM-powered auto-fixes",
+    
   ],
+  tech: ["Python", "OpenAI API", "LLMs", "Scikit-learn"],
+  linkPreview: "/",
+  linkSource: "https://github.com/EashanJoshi/DataLeakage",
+},
+
+{
+    name: "Graph-Based Analysis of the Maven Central Ecosystem (Open-Source Java Libraries)",
+    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Goblin and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries.",
+    bullets: [
+    "Queried 130M+ dependency edges",
+    "Computed metrics via Goblin & Weaver",
+    "Revealed patterns in release cadence"
+    ],
+    tech: ["Python", "Neo4j", "Goblin", "Weaver API", "Graph Theory", "Open Source"],
+    linkPreview: "/",
+    linkSource: "https://github.com/EashanJoshi/MSR_GoblinDSCI602_Eashan",
+  },
+
+  {
+  name: "CRM Ticket Similarity Detection using Information Retrieval & Siamese Neural Networks",
+  summary: "Developed a full-stack pipeline to measure CRM ticket and bug report similarity using BM25, LDA+GloVe, and Siamese CNNs across Eclipse, Firefox, and Mobile datasets.",
+  bullets: [
+    "Preprocessed bug report data",
+    "Applied BM25 & LDA+GloVe",
+    "Trained domain-specific Siamese CNN"
+  ],
+  tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
+  linkPreview: "/",
+  linkSource: "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
+},
+
+{
+    name: "Options Pricing Models",
+    summary: "Implements advanced pricing models for European and American call options with live data, sensitivity analysis, and ML predictions—designed for robust quantitative finance analysis.",
+    bullets: [
+      "Black-Scholes, binomial trees",
+      "Live market data feed",
+      "ML-based volatility prediction"
+    ],
+    tech: ["Python", "yfinance", "Black-Scholes", "binomial trees", "Greeks"],
+    linkPreview: "/",
+    linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
+  },
+  {
+  name: "Multiclass Image Classification with Deep CNN (Tiny ImageNet)",
+  summary: "Trained a deep convolutional neural network (DCNN) on Tiny ImageNet for multiclass image classification, achieving category-wise insights using TensorFlow and GPU-optimized workflows.",
+  bullets: [
+    "Built DCNN in TensorFlow",
+    "Preprocessed Tiny ImageNet data",
+    "Analyzed class-wise accuracy patterns"
+  ],
+  tech: ["Python", "TensorFlow", "CNN", "Tiny ImageNet"],
+  linkPreview: "/",
+  linkSource: "https://github.com/EashanJoshi/Image-Classification-DCNN",
+},
+
+  
+],
+
+
   about: {
     description: `
       Hi, I’m Eashan Joshi, a driven Software Engineer and AI Researcher passionate about building intelligent, high-performance systems. With hands-on experience in developing scalable backend services, LLM-integrated applications, and cloud-native infrastructures, I specialize in creating robust tools that blend performance with innovation. From financial technology to intelligent debugging platforms, my work spans multiple domains and leverages cutting-edge frameworks like LangChain, CUDA, PySpark, and Neo4j.

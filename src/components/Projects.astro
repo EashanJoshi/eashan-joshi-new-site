@@ -11,23 +11,36 @@ const { projects } = Astro.props;
 ---
 
 <Section text="Projects" href="projects">
-<div class="flex flex-wrap justify-between gap-6">
-  {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
-      const top = 98 + index * 40;
-      return (
-        <div
-          style={`top: ${top}px;`}
-          class="w-full md:w-[48%] mb-12 rounded-2xl border border-neutral/20 bg-black"
-        >
-         
-          <div class="rounded-2xl bg-[#1c232d]/85 p-6 min-h-[420px] flex flex-col justify-between">
-            <div class="px-6 pt-12">
-              <h3 class="mb-5 font-serif text-2xl font-medium text-primary">
-                {name}
-              </h3>
-              <p class="text-base text-neutral">{summary}</p>
-              <div class="flex gap-5 pt-10 text-white">
+  <div class="flex flex-wrap justify-between gap-6">
+    {
+      projects.map(({ name, summary, bullets, tech, image, linkPreview, linkSource }, index) => {
+        return (
+          <div class="w-full md:w-[48%] mb-12 rounded-2xl overflow-hidden border border-neutral/20 bg-[#1c232d]">
+            <div class="h-full p-6 flex flex-col justify-between min-h-[480px]">
+              <div>
+                <h3 class="mb-4 font-serif text-2xl font-medium text-primary">
+                  {name}
+                </h3>
+                <p class="text-base text-neutral mb-4">{summary}</p>
+
+                {bullets?.length > 0 && (
+                  <ul class="list-disc list-inside text-sm text-neutral mb-4 space-y-1">
+                    {bullets.map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {tech?.length > 0 && (
+                  <div class="flex flex-wrap gap-2 text-xs text-white mb-4">
+                    {tech.map((t) => (
+                      <span class="bg-neutral-800 px-2 py-1 rounded-full">{t}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div class="flex gap-5 pt-2 text-white mt-auto">
                 <a
                   href={linkSource}
                   target="_blank"
@@ -44,20 +57,9 @@ const { projects } = Astro.props;
                 </a>
               </div>
             </div>
-            <!--
-            <div class="flex items-end justify-end overflow-hidden">
-              <Image
-                class="h-full w-[95%] rounded-ss-xl rounded-ee-2xl object-none object-left-top sm:h-[85%] sm:w-full"
-                src={image}
-                alt={name}
-                width="736"
-                height="483"
-              />
-            </div> -->
           </div>
-        </div>
-      );
-    })
-  }
+        );
+      })
+    }
   </div>
 </Section>
