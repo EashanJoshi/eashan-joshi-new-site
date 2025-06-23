@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Eashan M. Joshi",
   author: "Eashan M. Joshi",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Software Engineer based in New York, USA. I specialize in building intelligent, high-performance applications, ranging from backend systems and data pipelines to LLM-integrated tools and financial modeling platforms.",
   lang: "en",
   siteLogo: "/eashan-small.jpg",
   navLinks: [
