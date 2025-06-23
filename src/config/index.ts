@@ -20,7 +20,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Github", href: "https://github.com/EashanJoshi" },
   ],
   socialImage: "/eashan-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://eashan-m-joshi.vercel.app",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -29,7 +29,7 @@ export const SITE_CONTENT: SiteContent = {
     specialty: "Software Engineer",
     summary:
       "Software Engineer with deep expertise in AI and systems design, driven by a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
-    email: "example@email.com",
+    email: "eashan.m.joshi@gmail.com",
   },
   experience: [
     {
