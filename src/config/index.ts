@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Eashan M. Joshi",
     specialty: "Software Engineer",
     summary:
-      "Software Engineer with deep expertise in AI and systems design, driven by a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
+      "Software Engineer with deep expertise in AI and system design, driven by a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
     email: "eashan.m.joshi@gmail.com",
   },
   experience: [
