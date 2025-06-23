@@ -77,7 +77,7 @@ export const SITE_CONTENT: SiteContent = {
       "40% faster bug fixes"
     ],
     tech: ["Python", "LangChain", "OpenAI API", "LLMs", "RAG", "Open Source"],
-    linkPreview: "/",
+    linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
   },
 
@@ -91,7 +91,7 @@ export const SITE_CONTENT: SiteContent = {
     
   ],
   tech: ["Python", "OpenAI API", "LLMs", "Scikit-learn"],
-  linkPreview: "/",
+  linkPreview: "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/DataLeakage",
 },
 
@@ -104,7 +104,7 @@ export const SITE_CONTENT: SiteContent = {
     "Revealed patterns in release cadence"
     ],
     tech: ["Python", "Neo4j", "Goblin", "Weaver API", "Graph Theory", "Open Source"],
-    linkPreview: "/",
+    linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/MSR_GoblinDSCI602_Eashan",
   },
 
@@ -117,7 +117,7 @@ export const SITE_CONTENT: SiteContent = {
     "Trained domain-specific Siamese CNN"
   ],
   tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
-  linkPreview: "/",
+  linkPreview: "https://drive.google.com/file/d/1rB9b_w231Cjr4_VGW8KxHt2qNTnN6OPZ/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
 },
 
@@ -142,7 +142,7 @@ export const SITE_CONTENT: SiteContent = {
     "Analyzed class-wise accuracy patterns"
   ],
   tech: ["Python", "TensorFlow", "CNN", "Tiny ImageNet"],
-  linkPreview: "/",
+  linkPreview: "https://drive.google.com/file/d/1YnzIxTJ1WGjHB0Vv9OXfHNhMIDfyQQeh/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/Image-Classification-DCNN",
 },
 
