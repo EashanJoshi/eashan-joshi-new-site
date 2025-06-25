@@ -130,7 +130,7 @@ export const SITE_CONTENT: SiteContent = {
       "ML-based volatility prediction"
     ],
     tech: ["Python", "yfinance", "Black-Scholes", "binomial trees", "Greeks"],
-    linkPreview: "/",
+    linkPreview: "https://github.com/EashanJoshi/Options-Pricing-Models",
     linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
   },
   {
