@@ -76,14 +76,14 @@ export const SITE_CONTENT: SiteContent = {
       "RAG-powered prompt injection",
       "40% faster bug fixes"
     ],
-    tech: ["Python", "LangChain", "GPT", "LLMs", "RAG", "Open Source"],
+    tech: ["Python", "LangChain", "GPT-4", "LLMs", "RAG", "Open Source"],
     linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
   },
 
   {
   name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
-  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT) to generate context-aware fix suggestions and automate corrections.",
+  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT-4) to generate context-aware fix suggestions and automate corrections.",
   bullets: [
     "Flags leakage patterns",
     "Suggests fix strategies",
