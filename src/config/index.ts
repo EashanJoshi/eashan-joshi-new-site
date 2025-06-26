@@ -90,7 +90,7 @@ export const SITE_CONTENT: SiteContent = {
     "v1.2: LLM-powered auto-fixes",
     
   ],
-  tech: ["Python", "GPT", "LLMs", "Scikit-learn"],
+  tech: ["Python", "GPT-4", "LLMs", "Scikit-learn"],
   linkPreview: "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/DataLeakage",
 },
