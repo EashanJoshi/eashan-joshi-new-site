@@ -76,7 +76,7 @@ export const SITE_CONTENT: SiteContent = {
       "RAG-powered prompt injection",
       "40% faster bug fixes"
     ],
-    tech: ["Python", "LangChain", "OpenAI API", "LLMs", "RAG", "Open Source"],
+    tech: ["Python", "LangChain", "GPT", "LLMs", "RAG", "Open Source"],
     linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
   },
@@ -90,7 +90,7 @@ export const SITE_CONTENT: SiteContent = {
     "v1.2: LLM-powered auto-fixes",
     
   ],
-  tech: ["Python", "OpenAI API", "LLMs", "Scikit-learn"],
+  tech: ["Python", "GPT", "LLMs", "Scikit-learn"],
   linkPreview: "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/DataLeakage",
 },
