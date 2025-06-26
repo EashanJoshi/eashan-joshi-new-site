@@ -83,7 +83,7 @@ export const SITE_CONTENT: SiteContent = {
 
   {
   name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
-  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via OpenAI API) to generate context-aware fix suggestions and automate corrections.",
+  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT) to generate context-aware fix suggestions and automate corrections.",
   bullets: [
     "Flags leakage patterns",
     "Suggests fix strategies",
