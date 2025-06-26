@@ -109,7 +109,7 @@ export const SITE_CONTENT: SiteContent = {
   },
 
   {
-  name: "CRM Ticket Similarity Detection using Information Retrieval & Siamese Neural Networks",
+  name: "Bug Report Similarity Detection using Information Retrieval & Siamese Neural Networks",
   summary: "Developed a full-stack pipeline to measure CRM ticket and bug report similarity using BM25, LDA+GloVe, and Siamese CNNs across Eclipse, Firefox, and Mobile datasets.",
   bullets: [
     "Preprocessed bug report data",
@@ -117,7 +117,7 @@ export const SITE_CONTENT: SiteContent = {
     "Trained domain-specific Siamese CNN"
   ],
   tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
-  linkPreview: "https://drive.google.com/file/d/1rB9b_w231Cjr4_VGW8KxHt2qNTnN6OPZ/view?usp=sharing",
+  linkPreview: "https://drive.google.com/file/d/1FEi4QPhCwTrMbIQjRUaDRuIaftjWzt_s/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
 },
 
