@@ -43,17 +43,17 @@ export const SITE_CONTENT: SiteContent = {
         "Architected graph-based systems in Neo4j using APOC procedures to analyze 220K+ open source Maven Central libraries, uncovering patterns in dependency growth and release cadence for IEEE - ICMI research",
       ],
     },
-    {
-      company: "FinSharpe",
-      position: "Software Engineer Intern",
-      startDate: "May 2023",
-      endDate: "Aug 2023",
-      summary: [
-        "Built backend services in Python to process financial market data and support execution of rule-based trading strategies",
-        "Containerized and orchestrated core services using Docker and Kubernetes, reducing deployment downtime from 3 hours/month to under 15 minutes and improving system reliability",
-        "Integrated Python-based machine learning models to analyze high-risk securities and embed VaR-driven logic into backend pipelines, contributing to an $850,000 investment",
-      ],
-    },
+    // {
+    //   company: "FinSharpe",
+    //   position: "Software Engineer Intern",
+    //   startDate: "May 2023",
+    //   endDate: "Aug 2023",
+    //   summary: [
+    //     "Built backend services in Python to process financial market data and support execution of rule-based trading strategies",
+    //     "Containerized and orchestrated core services using Docker and Kubernetes, reducing deployment downtime from 3 hours/month to under 15 minutes and improving system reliability",
+    //     "Integrated Python-based machine learning models to analyze high-risk securities and embed VaR-driven logic into backend pipelines, contributing to an $850,000 investment",
+    //   ],
+    // },
     {
       company: "Yardi",
       position: "Software Engineer",
