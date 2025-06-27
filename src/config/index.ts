@@ -38,9 +38,10 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Aug 2023",
       endDate: "May 2025",
       summary: [
-        "Built backend infrastructure for a retrieval-augmented generation (RAG) system using Python, OpenAI API, and vector search to enhance LLM workflows, boosting downstream task performance by 3x through context aware prompt injection",
-        "Designed high-throughput GPU data pipelines with CUDA, processing 5M+ ChatGPT prompt logs and extracting 15K+ unique prompt patterns to support model tuning and evaluation",
-        "Architected graph-based systems in Neo4j using APOC procedures to analyze 220K+ open source Maven Central libraries, uncovering patterns in dependency growth and release cadence for IEEE - ICMI research",
+        "Architected backend infrastructure for a retrieval-augmented generation (RAG) system using Python, LLM (GPT-4), and vector search, boosting downstream task performance by 3x through context aware prompt injection",
+        "Designed high-throughput GPU data pipelines with CUDA, processing 5M+ ChatGPT prompt logs and analyzed 220K+ open-source Maven Central libraries using Neo4j to uncover dependency patterns and inform IEEE ICMI research",
+        "Developed a tool to detect multi-test data leakage in ML workflows, integrating GPT-4 for auto-fixes and testing across 100+ GitHub pipelines"
+,
       ],
     },
     // {
@@ -60,10 +61,12 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Sep 2020",
       endDate: "Sep 2021",
       summary: [
-        "Improved financial management efficiency by developing 80+ components in the Trust Accounting Application using Python, JavaScript and PostgreSQL, leading to a $300,000 reduction in operational costs",
-        "Implemented custom programming solutions using Python and PostgreSQL, automating manual workflows and reducing data processing time by 70%, saving 60+ hours of analyst effort per month",
-        "Generated robust data pipelines and scalable business solutions using PySpark, reducing financial data error rate by 10% in insurance management systems",
-        "Created REST APIs within the Trust Accounting module of Yardi Voyager, automating workflows and addressing custom programming requests to meet unique client requirements",
+        "Developed and maintained 80+ backend components in Python and PostgreSQL, supporting multi-tenant accounting operations across insurance, tax, and escrow workflows in production environments",
+        "Created RESTful APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
+        "Automated custom workflows and designed schema-based validation logic using Python and PostgreSQL, reducing manual effort by 60+ hours/month and improving data integrity by 15%",
+        "Collaborated with QA to design unit tests and integration test cases, boosting code coverage and reducing defect turnaround by 50% across trust accounting modules",
+        "Adopted PySpark for periodic financial data processing and reporting tasks, improving data pipeline performance and batch job reliability by streamlining ETL operations",
+        "Logged and resolved 60+ production issues via CRM tickets, applying root-cause debugging using PostgreSQL logs and Python profiling tools during sprint cycles"
       ],
     },
   ],
