@@ -108,7 +108,7 @@ export const SITE_CONTENT: SiteContent = {
     ],
     tech: ["Python", "Neo4j", "Goblin", "Weaver API", "Graph Theory", "Open Source"],
     linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
-    linkSource: "https://github.com/EashanJoshi/MSR_GoblinDSCI602_Eashan",
+    linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
   },
 
   {
