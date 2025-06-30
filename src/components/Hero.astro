@@ -9,40 +9,70 @@ const { name, specialty, summary, email } = Astro.props;
   <!-- Hero Content -->
   <div>
     <h1 class="mb-1 font-serif text-6xl font-bold tracking-tightest text-white sm:text-7xl md:mb-0 md:text-8xl">
-
       {name}
     </h1>
     <p class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
       {specialty}
     </p>
-    <p class="mb-16 text-base font-normal text-neutral md:text-lg">
+    <p class="mb-8 text-base font-normal text-neutral md:text-lg">
       {summary}
     </p>
   </div>
 
-  <!-- 2-Column Block Section -->
-  <div class="flex flex-col md:flex-row gap-6 w-full max-w-4xl px-4 -mt-5">
+ <div class="flex flex-col md:flex-row items-start gap-8 w-full px-4 mt-8 mb-4">
+  <!-- Latest Work Block: Bigger square -->
+  <div class="flex-[1] bg-neutral-900 rounded-xl p-4 shadow-md hover:scale-105 transition-transform duration-300 min-h-[150px] flex flex-col justify-center items-center">
+    <h3 class="text-xl font-bold text-primary mb-3">View My Latest Work</h3>
+    <a href="https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full h-full flex items-center justify-center">
+      <video 
+        id="latestVideo"
+        src="/Codeintellect_demo_main.mp4"
+        autoplay 
+        muted 
+        playsinline
+        class="rounded-md w-[95%] h-[95%] object-cover"
+      ></video>
+    </a>
+  </div>
 
-    <!-- LeetCode Box -->
+  <!-- Right Column: LeetCode + Strava stacked -->
+  <div class="flex flex-col gap-4 flex-1">
+    <!-- LeetCode Block -->
     <a 
       href="https://leetcode.com/u/Lucifer71/" 
       target="_blank" 
       rel="noopener noreferrer" 
-      class="flex-1 bg-gradient-to-br from-blue-500 to-indigo-700 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl"
+      class="bg-gradient-to-br from-blue-500 to-indigo-700 hover:scale-105 transition-transform duration-300 text-white p-4 rounded-xl shadow-md min-h-[120px] flex flex-col justify-center"
     >
-      <h3 class="text-2xl font-bold mb-2">LeetCode</h3>
-      <p class="text-base">Check out my solved problems and coding progress!</p>
+      <h3 class="text-xl font-bold mb-1">LeetCode</h3>
+      <p class="text-xs">Check out my solved problems and coding progress!</p>
     </a>
 
-    <!-- Strava Box -->
+    <!-- Strava Block -->
     <a 
       href="https://www.strava.com/athletes/170749275" 
       target="_blank" 
       rel="noopener noreferrer" 
-      class="flex-1 bg-gradient-to-br from-sky-600 to-blue-900 hover:scale-105 transition-transform duration-300 text-white p-6 rounded-2xl shadow-xl"
+      class="bg-gradient-to-br from-sky-600 to-blue-900 hover:scale-105 transition-transform duration-300 text-white p-4 rounded-xl shadow-md min-h-[120px] flex flex-col justify-center"
     >
-      <h3 class="text-2xl font-bold mb-2">Strava</h3>
-      <p class="text-base">Track my runs, rides, and weekly training stats!</p>
+      <h3 class="text-xl font-bold mb-1">Strava</h3>
+      <p class="text-xs">Track my runs, rides, and weekly training stats!</p>
     </a>
   </div>
+</div>
+
+
+<script is:inline>
+  const video = document.getElementById('latestVideo');
+  video.addEventListener('timeupdate', () => {
+    if (video.currentTime >= 5) {
+      video.currentTime = 0;
+      video.play();
+    }
+  });
+</script>
+
+
+
+
 </section>
