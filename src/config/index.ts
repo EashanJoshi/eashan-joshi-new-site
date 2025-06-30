@@ -85,7 +85,7 @@ export const SITE_CONTENT: SiteContent = {
   // },
   {
   name: "CodeIntellect - Multi-Agent AI Systems Lab",
-  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent GPT-4 system for automated code debugging, critique, and ML leakage checks. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
+  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent AI system for automated code debugging, critique, and ML leakage checks. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
   bullets: [
     "Deployed multi-agent AI architecture",
     "120+ debug sessions",
