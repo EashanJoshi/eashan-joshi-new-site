@@ -71,18 +71,31 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
  projects: [
+  // {
+  //   name: "DebugMate - GenAI Software Debugging & Refactoring Assistant",
+  //   summary: "Engineered a GenAI-powered debugging tool using Retrieval-Augmented Generation (RAG) and prompt engineering, earning a 4.6/5 user rating and reducing bug resolution time by 40% across programming languages.",
+  //   bullets: [
+  //     "Built with LangChain & OpenAI",
+  //     "RAG-powered prompt injection",
+  //     "40% faster bug fixes"
+  //   ],
+  //   tech: ["Python", "LangChain", "GPT-4", "LLMs", "RAG", "Open Source"],
+  //   linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
+  //   linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
+  // },
   {
-    name: "DebugMate - GenAI Software Debugging & Refactoring Assistant",
-    summary: "Engineered a GenAI-powered debugging tool using Retrieval-Augmented Generation (RAG) and prompt engineering, earning a 4.6/5 user rating and reducing bug resolution time by 40% across programming languages.",
-    bullets: [
-      "Built with LangChain & OpenAI",
-      "RAG-powered prompt injection",
-      "40% faster bug fixes"
-    ],
-    tech: ["Python", "LangChain", "GPT-4", "LLMs", "RAG", "Open Source"],
-    linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
-    linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
-  },
+  name: "CodeIntellect - Multi-Agent AI Systems Lab",
+  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent GPT-4 system for automated code debugging, critique, and ML leakage checks. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
+  bullets: [
+    "Deployed multi-agent AI architecture",
+    "120+ debug sessions",
+    "Excel log exports"
+  ],
+  tech: ["Python", "FastAPI", "React", "Pandas", "GPT-4", "LLMs"],
+  linkPreview: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
+  linkSource: "https://github.com/EashanJoshi/CodeIntellect-MultiAgent-Debugger"
+},
+
 
   {
   name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
@@ -136,18 +149,18 @@ export const SITE_CONTENT: SiteContent = {
     linkPreview: "https://github.com/EashanJoshi/Options-Pricing-Models",
     linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
   },
-  {
-  name: "Multiclass Image Classification with Deep CNN (Tiny ImageNet)",
-  summary: "Trained a deep convolutional neural network (DCNN) on Tiny ImageNet for multiclass image classification, achieving category-wise insights using TensorFlow and GPU-optimized workflows.",
-  bullets: [
-    "Built DCNN in TensorFlow",
-    "Preprocessed Tiny ImageNet data",
-    "Analyzed class-wise accuracy patterns"
-  ],
-  tech: ["Python", "TensorFlow", "CNN", "Tiny ImageNet"],
-  linkPreview: "https://drive.google.com/file/d/1YnzIxTJ1WGjHB0Vv9OXfHNhMIDfyQQeh/view?usp=sharing",
-  linkSource: "https://github.com/EashanJoshi/Image-Classification-DCNN",
-},
+//   {
+//   name: "Multiclass Image Classification with Deep CNN (Tiny ImageNet)",
+//   summary: "Trained a deep convolutional neural network (DCNN) on Tiny ImageNet for multiclass image classification, achieving category-wise insights using TensorFlow and GPU-optimized workflows.",
+//   bullets: [
+//     "Built DCNN in TensorFlow",
+//     "Preprocessed Tiny ImageNet data",
+//     "Analyzed class-wise accuracy patterns"
+//   ],
+//   tech: ["Python", "TensorFlow", "CNN", "Tiny ImageNet"],
+//   linkPreview: "https://drive.google.com/file/d/1YnzIxTJ1WGjHB0Vv9OXfHNhMIDfyQQeh/view?usp=sharing",
+//   linkSource: "https://github.com/EashanJoshi/Image-Classification-DCNN",
+// },
 
   
 ],
