@@ -91,7 +91,7 @@ export const SITE_CONTENT: SiteContent = {
     "120+ debug sessions",
     "Excel log exports"
   ],
-  tech: ["Python", "FastAPI", "React", "Pandas", "GPT-4", "LLMs"],
+  tech: ["Python", "FastAPI", "React", "AWS (S3, EKS)", "GPT-4", "LLMs"],
   linkPreview: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/CodeIntellect-MultiAgent-Debugger"
 },
@@ -104,7 +104,7 @@ export const SITE_CONTENT: SiteContent = {
     "Computed metrics via Goblin & Weaver",
     "Extending to GraphRAG interface"
     ],
-    tech: ["Python", "CUDA", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
+    tech: ["Python", "CUDA", "Cypher", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
     linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
   },
