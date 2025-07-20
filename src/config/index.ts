@@ -97,6 +97,21 @@ export const SITE_CONTENT: SiteContent = {
 },
 
 
+
+
+{
+    name: "Graph-Based Analysis of the Maven Central Ecosystem (Open-Source Java Libraries)",
+    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Goblin and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries. Paper accepted at IEEE IC_ETC 2025.",
+    bullets: [
+    "Queried 130M+ dependency edges",
+    "Computed metrics via Goblin & Weaver",
+    "Extending to GraphRAG interface"
+    ],
+    tech: ["Python", "CUDA", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
+    linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
+    linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
+  },
+
   {
   name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
   summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT-4) to generate context-aware fix suggestions and automate corrections.",
@@ -110,19 +125,6 @@ export const SITE_CONTENT: SiteContent = {
   linkPreview: "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/DataLeakage",
 },
-
-{
-    name: "Graph-Based Analysis of the Maven Central Ecosystem (Open-Source Java Libraries)",
-    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Goblin and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries. (Paper accepted at IEEE IC_ETC 2025.)",
-    bullets: [
-    "Queried 130M+ dependency edges",
-    "Computed metrics via Goblin & Weaver",
-    "Extending to GraphRAG interface"
-    ],
-    tech: ["Python", "CUDA", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
-    linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
-    linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
-  },
 
   {
   name: "Bug Report Similarity Detection using Information Retrieval & Siamese Neural Networks",
