@@ -85,13 +85,13 @@ export const SITE_CONTENT: SiteContent = {
   // },
   {
   name: "CodeIntellect - Multi-Agent AI Systems Lab",
-  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent AI system for automated code debugging, critique, and ML leakage checks. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
+  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent AI system for automated code debugging, critique, and ML leakage checks. Integrated this system within a stateless, containerized EKS pipeline for processing code at scale. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
   bullets: [
     "Deployed multi-agent AI architecture",
     "120+ debug sessions",
     "Excel log exports"
   ],
-  tech: ["Python", "FastAPI", "React", "AWS (S3, EKS)", "GPT-4", "LLMs"],
+  tech: ["Python", "FastAPI", "React", "Docker", "AWS (S3, EKS)", "GPT-4", "LLMs"],
   linkPreview: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/CodeIntellect-MultiAgent-Debugger"
 },
