@@ -113,13 +113,13 @@ export const SITE_CONTENT: SiteContent = {
 
 {
     name: "Graph-Based Analysis of the Maven Central Ecosystem (Open-Source Java Libraries)",
-    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Goblin and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries.",
+    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Goblin and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries. *Paper accepted at IEEE IC_ETC 2025.*",
     bullets: [
     "Queried 130M+ dependency edges",
     "Computed metrics via Goblin & Weaver",
-    "Revealed patterns in release cadence"
+    "Extending to GraphRAG interface"
     ],
-    tech: ["Python", "CUDA", "Neo4j", "Goblin", "Weaver API", "Graph Theory", "Open Source"],
+    tech: ["Python", "CUDA", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
     linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
     linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
   },
