@@ -39,7 +39,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "May 2025",
       summary: [
         "Architected backend infrastructure for a retrieval-augmented generation (RAG) system using Python, LLM (GPT-4), and vector search, boosting downstream task performance by 3x through context aware prompt injection",
-        "Designed high-throughput GPU data pipelines with CUDA, processing 5M+ ChatGPT prompt logs and analyzed 220K+ open-source Maven Central libraries using Neo4j to uncover dependency patterns and inform IEEE ICMI research",
+        "Designed GPU pipelines with CUDA, processing 5M+ ChatGPT prompt logs from the open-source DevGPT dataset and 130M+ Maven Central dependencies and used Neo4j to uncover ecosystem patterns for IEEE ICETC research",
         "Developed a tool to detect multi-test data leakage in ML workflows, integrating GPT-4 for auto-fixes and testing across 100+ GitHub pipelines"
 ,
       ],
@@ -62,7 +62,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Sep 2021",
       summary: [
         "Developed and maintained 80+ backend components in Python and PostgreSQL, supporting multi-tenant accounting operations across insurance, tax, and escrow workflows in production environments",
-        "Created RESTful APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
+        "Created SOAP/REST APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
         "Automated custom workflows and designed schema-based validation logic using Python and PostgreSQL, reducing manual effort by 60+ hours/month and improving data integrity by 15%",
         "Collaborated with QA to design unit tests and integration test cases, boosting code coverage and reducing defect turnaround by 50% across trust accounting modules",
         "Adopted PySpark for periodic financial data processing and reporting tasks, improving data pipeline performance and batch job reliability by streamlining ETL operations",
