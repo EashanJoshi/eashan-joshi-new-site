@@ -93,7 +93,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   tech: ["Python", "FastAPI", "React", "Docker", "AWS (S3, EKS)", "GPT-4", "LLMs"],
   linkPreview: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
-  linkSource: "https://github.com/EashanJoshi/CodeIntellect-MultiAgent-Debugger"
+  linkSource: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing"
 },
 
 {
