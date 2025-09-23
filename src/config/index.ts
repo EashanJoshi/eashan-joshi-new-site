@@ -124,7 +124,7 @@ export const SITE_CONTENT: SiteContent = {
 },
 
   {
-  name: "Bug Report Similarity Detection using Information Retrieval & Siamese Neural Networks",
+  name: "Information Retrieval with Vector Embeddings for Bugzilla Reports (Open-Source)",
   summary: "Developed a full-stack pipeline to measure CRM ticket and bug report similarity using BM25, LDA+GloVe, and Siamese CNNs across Eclipse, Firefox, and Mobile datasets.",
   bullets: [
     "Preprocessed bug report data",
@@ -132,7 +132,7 @@ export const SITE_CONTENT: SiteContent = {
     "Trained domain-specific Siamese CNN"
   ],
   tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
-  linkPreview: "https://drive.google.com/file/d/1FEi4QPhCwTrMbIQjRUaDRuIaftjWzt_s/view?usp=sharing",
+  linkPreview: "https://drive.google.com/file/d/15HPCIsCgWop5m4rl_o_VZLyoW1ppQsQR/view?usp=sharing",
   linkSource: "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
 },
 
