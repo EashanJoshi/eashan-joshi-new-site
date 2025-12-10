@@ -12,7 +12,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Resume", href: "#resume" },
     { text: "Projects", href: "#projects" },
     { text: "Skills", href: "#skills" },
-    { text: "Experience", href: "#experience" },
+    //{ text: "Experience", href: "#experience" },
     { text: "Contact", href: "#contact" },
   ],
   socialLinks: [
@@ -31,19 +31,19 @@ export const SITE_CONTENT: SiteContent = {
       "Software Engineer with deep expertise in AI and system design, driven by a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
     email: "eashan.m.joshi@gmail.com",
   },
-  experience: [
-    {
-      company: "Rochester Institute of Technology",
-      position: "Graduate Research Assistant",
-      startDate: "Aug 2023",
-      endDate: "May 2025",
-      summary: [
-        "Architected backend infrastructure for a retrieval-augmented generation (RAG) system using Python, LLM (GPT-4), and vector search, boosting downstream task performance by 3x through context aware prompt injection",
-        "Designed GPU pipelines with CUDA, processing 5M+ ChatGPT prompt logs from the open-source DevGPT dataset and 130M+ Maven Central dependencies and used Neo4j to uncover ecosystem patterns for IEEE ICETC research",
-        "Developed a tool to detect multi-test data leakage in ML workflows, integrating GPT-4 for auto-fixes and testing across 100+ GitHub pipelines"
-,
-      ],
-    },
+   experience: [
+//     {
+//       company: "Rochester Institute of Technology",
+//       position: "Graduate Research Assistant",
+//       startDate: "Aug 2023",
+//       endDate: "May 2025",
+//       summary: [
+//         "Architected backend infrastructure for a retrieval-augmented generation (RAG) system using Python, LLM (GPT-4), and vector search, boosting downstream task performance by 3x through context aware prompt injection",
+//         "Designed GPU pipelines with CUDA, processing 5M+ ChatGPT prompt logs from the open-source DevGPT dataset and 130M+ Maven Central dependencies and used Neo4j to uncover ecosystem patterns for IEEE ICETC research",
+//         "Developed a tool to detect multi-test data leakage in ML workflows, integrating GPT-4 for auto-fixes and testing across 100+ GitHub pipelines"
+// ,
+//       ],
+//     },
     // {
     //   company: "FinSharpe",
     //   position: "Software Engineer Intern",
@@ -55,20 +55,20 @@ export const SITE_CONTENT: SiteContent = {
     //     "Integrated Python-based machine learning models to analyze high-risk securities and embed VaR-driven logic into backend pipelines, contributing to an $850,000 investment",
     //   ],
     // },
-    {
-      company: "Yardi",
-      position: "Software Engineer",
-      startDate: "Sep 2020",
-      endDate: "Sep 2021",
-      summary: [
-        "Developed and maintained 80+ backend components in Python and PostgreSQL, supporting multi-tenant accounting operations across insurance, tax, and escrow workflows in production environments",
-        "Created SOAP/REST APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
-        "Automated custom workflows and designed schema-based validation logic using Python and PostgreSQL, reducing manual effort by 60+ hours/month and improving data integrity by 15%",
-        "Collaborated with QA to design unit tests and integration test cases, boosting code coverage and reducing defect turnaround by 50% across trust accounting modules",
-        "Adopted PySpark for periodic financial data processing and reporting tasks, improving data pipeline performance and batch job reliability by streamlining ETL operations",
-        "Logged and resolved 60+ production issues via CRM tickets, applying root-cause debugging using PostgreSQL logs and Python profiling tools during sprint cycles"
-      ],
-    },
+    // {
+    //   company: "Yardi",
+    //   position: "Software Engineer",
+    //   startDate: "Sep 2020",
+    //   endDate: "Sep 2021",
+    //   summary: [
+    //     "Developed and maintained 80+ backend components in Python and PostgreSQL, supporting multi-tenant accounting operations across insurance, tax, and escrow workflows in production environments",
+    //     "Created SOAP/REST APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
+    //     "Automated custom workflows and designed schema-based validation logic using Python and PostgreSQL, reducing manual effort by 60+ hours/month and improving data integrity by 15%",
+    //     "Collaborated with QA to design unit tests and integration test cases, boosting code coverage and reducing defect turnaround by 50% across trust accounting modules",
+    //     "Adopted PySpark for periodic financial data processing and reporting tasks, improving data pipeline performance and batch job reliability by streamlining ETL operations",
+    //     "Logged and resolved 60+ production issues via CRM tickets, applying root-cause debugging using PostgreSQL logs and Python profiling tools during sprint cycles"
+    //   ],
+    //},
   ],
  projects: [
   // {
