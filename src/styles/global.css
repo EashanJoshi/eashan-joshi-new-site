@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @theme {
   --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
   --font-serif: "Gabarito Variable", ui-serif, serif;

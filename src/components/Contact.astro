@@ -1,28 +1,67 @@
 ---
 import Section from "./Section.astro";
+import Email from "@icons/Email.astro";
+import Github from "@icons/Github.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Instagram from "@icons/Instagram.astro";
+import type { ContactProps, ContactIcon } from "@types";
+
+type Props = ContactProps;
+
+const { heading, description, links } = Astro.props;
+
+const icons = {
+  email: Email,
+  github: Github,
+  linkedin: Linkedin,
+  instagram: Instagram,
+} satisfies Record<ContactIcon, typeof Email>;
 ---
 
-<Section text="Contact Me" href="contact">
-  <div class="flex justify-center">
-    <div class="bg-neutral-900 p-6 rounded-xl shadow-lg max-w-xl w-full text-center space-y-4">
-      <h3 class="text-xl font-semibold text-white">Let’s Connect</h3>
-      <p class="text-neutral-300">
-        Feel free to reach out for collaboration, questions, or just to say hi!
-      </p>
-      <div class="space-y-2">
-        <p>
-          <span class="text-neutral-400">Email:</span>
-          <a href="mailto:eashan.m.joshi@gmail.com" class="text-primary hover:underline">
-            eashan.m.joshi@gmail.com
-          </a>
-        </p>
-        <p>
-          <span class="text-neutral-400">LinkedIn:</span>
-          <a href="https://www.linkedin.com/in/eashanjoshi" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
-            linkedin.com/in/eashanjoshi
-          </a>
-        </p>
-      </div>
-    </div>
+<Section text={heading} href="lets-connect">
+  <div class="mx-auto max-w-3xl space-y-8 text-center">
+    <p class="text-neutral">{description}</p>
+
+    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2" role="list">
+      {
+        links.map(({ label, href, icon, external }) => {
+          const Icon = icons[icon];
+          const isExternal = Boolean(external);
+
+          return (
+            <li>
+              <a
+                href={href}
+                class:list={[
+                  "group flex items-center gap-4 rounded-xl border border-neutral/20 bg-[#1c232d]/75 px-5 py-4 text-left text-white backdrop-blur-md",
+                  "transition-colors duration-300",
+                  "hover:border-primary/40 hover:bg-[#1c232d]/85",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black",
+                  "active:border-primary/60",
+                ]}
+                {...(isExternal
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                aria-label={
+                  isExternal
+                    ? `Open ${label} profile in a new tab`
+                    : `Send an email`
+                }
+              >
+                <span
+                  class="flex size-11 shrink-0 items-center justify-center rounded-lg bg-neutral-800 text-primary transition-colors duration-300 group-hover:bg-neutral-800/80"
+                  aria-hidden="true"
+                >
+                  <Icon />
+                </span>
+                <span class="text-base font-semibold tracking-tight">
+                  {label}
+                </span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
   </div>
 </Section>

@@ -5,13 +5,14 @@ import type { HeaderProps } from "@types";
 
 type Props = HeaderProps;
 
-const { siteLogo, navLinks } = Astro.props;
+const { siteLogo, author, navLinks } = Astro.props;
 ---
 
 <header
-  class="top-0 z-50 mx-auto flex max-w-5xl animate-slide-in justify-between bg-black px-5 py-6"
+  id="site-header"
+  class="site-header sticky top-0 z-50 mx-auto flex w-full max-w-5xl justify-between border-b border-neutral/15 bg-[#1c232d]/90 px-5 py-6 backdrop-blur-md"
 >
-  <a href="/" aria-label="Home link">
+  <a href="/" class="flex items-center gap-3" aria-label="Home link">
     <Image
       class="rounded-full"
       src={siteLogo}
@@ -19,12 +20,16 @@ const { siteLogo, navLinks } = Astro.props;
       height="45"
       alt="website logo"
     />
+    <span class="hidden text-sm font-medium tracking-tight text-white sm:inline sm:text-base">
+      {author}
+    </span>
   </a>
 
   <button
     type="button"
     id="menu-button"
     class="px-1.5 text-neutral sm:hidden"
+    aria-label="Open navigation menu"
     aria-expanded="false"
     aria-controls="main-menu"
   >
@@ -32,7 +37,7 @@ const { siteLogo, navLinks } = Astro.props;
   </button>
 
   <nav
-    class="absolute top-20 right-5 hidden rounded-xl border border-neutral/40 bg-black px-4 py-5 text-neutral sm:static sm:block sm:border-0 sm:bg-transparent sm:p-0"
+    class="absolute top-20 right-5 hidden rounded-xl border border-neutral/30 bg-[#1c232d]/95 px-4 py-5 text-neutral backdrop-blur-md sm:static sm:block sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none"
     id="main-menu"
   >
     <ul class="gap-2 sm:flex">
@@ -40,8 +45,11 @@ const { siteLogo, navLinks } = Astro.props;
         navLinks.map((link) => (
           <li class="relative">
             <a
-              class={`nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white`}
+              class="nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white"
               href={link.href}
+              {...(link.external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
             >
               {link.text}
             </a>
@@ -53,59 +61,140 @@ const { siteLogo, navLinks } = Astro.props;
 </header>
 
 <script>
-  // Toggle mobile menu
+  const header = document.querySelector<HTMLElement>("#site-header");
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#main-menu");
   const navItems = document.querySelectorAll("#main-menu > ul > li > a");
 
-  const toggleMenu = () => {
-    menu?.classList.toggle("hidden");
-    const isHidden = menu?.classList.contains("hidden");
-    button?.setAttribute("aria-expanded", `${!isHidden}`);
-  };
+  if (header) {
+    const abortController = new AbortController();
+    const { signal } = abortController;
 
-  button?.addEventListener("click", toggleMenu);
-  navItems.forEach((item) => {
-    item?.addEventListener("click", toggleMenu);
-  });
+    const SCROLL_STOP_MS = 400;
+    let scrollStopTimer: number | undefined;
+    let isScrolling = false;
 
-  // Update navigation based on scroll position with Intersection Observer
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("href") === `#${entry.target.id}`) {
-              item.classList.add("text-white", "md:after:opacity-100");
-            } else {
-              item.classList.remove("text-white", "md:after:opacity-100");
-            }
-          });
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
+    const isMenuOpen = () =>
+      button?.getAttribute("aria-expanded") === "true";
 
-  document.querySelectorAll("section").forEach((section) => {
-    observer.observe(section);
-  });
+    const setHeaderHidden = (hidden: boolean) => {
+      header.classList.toggle("is-hidden", hidden);
+      header.toggleAttribute("inert", hidden);
+      header.setAttribute("aria-hidden", hidden ? "true" : "false");
+    };
 
-  // Cleanup observer
-  document.onvisibilitychange = () => {
-    if (document.visibilityState === "hidden") {
+    const showHeaderIfAllowed = () => {
+      isScrolling = false;
+      setHeaderHidden(false);
+    };
+
+    const onScroll = () => {
+      if (isMenuOpen()) {
+        setHeaderHidden(false);
+        window.clearTimeout(scrollStopTimer);
+        isScrolling = false;
+        return;
+      }
+
+      if (!isScrolling) {
+        isScrolling = true;
+      }
+      setHeaderHidden(true);
+
+      window.clearTimeout(scrollStopTimer);
+      scrollStopTimer = window.setTimeout(showHeaderIfAllowed, SCROLL_STOP_MS);
+    };
+
+    const toggleMenu = () => {
+      menu?.classList.toggle("hidden");
+      const isHidden = menu?.classList.contains("hidden");
+      button?.setAttribute("aria-expanded", `${!isHidden}`);
+      button?.setAttribute(
+        "aria-label",
+        isHidden ? "Open navigation menu" : "Close navigation menu",
+      );
+
+      if (!isHidden) {
+        window.clearTimeout(scrollStopTimer);
+        isScrolling = false;
+        setHeaderHidden(false);
+      }
+    };
+
+    button?.addEventListener("click", toggleMenu, { signal });
+    navItems.forEach((item) => {
+      item.addEventListener("click", toggleMenu, { signal });
+    });
+
+    window.addEventListener("scroll", onScroll, { passive: true, signal });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navItems.forEach((item) => {
+              if (item.getAttribute("href") === `#${entry.target.id}`) {
+                item.classList.add("text-white", "md:after:opacity-100");
+              } else {
+                item.classList.remove("text-white", "md:after:opacity-100");
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    document.querySelectorAll("section").forEach((section) => {
+      observer.observe(section);
+    });
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      } else {
+        document.querySelectorAll("section").forEach((section) => {
+          observer.observe(section);
+        });
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange, {
+      signal,
+    });
+
+    const cleanup = () => {
+      window.clearTimeout(scrollStopTimer);
       observer.disconnect();
-    } else {
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-      });
-    }
-  };
+      abortController.abort();
+    };
+
+    window.addEventListener("pagehide", cleanup, { signal });
+    signal.addEventListener("abort", () => {
+      window.clearTimeout(scrollStopTimer);
+      observer.disconnect();
+    });
+  }
 </script>
 
 <style>
-  header {
-    animation-timeline: scroll();
-    animation-range: 0 650px;
+  .site-header {
+    transition:
+      transform 280ms ease,
+      opacity 280ms ease;
+    will-change: transform, opacity;
+  }
+
+  .site-header.is-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-header {
+      transition: none;
+      will-change: auto;
+    }
   }
 </style>

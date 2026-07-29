@@ -1,21 +1,27 @@
 ---
 import Section from "./Section.astro";
+import type { ResumeProps } from "@types";
+
+type Props = ResumeProps;
+
+const { description, href, label } = Astro.props;
 ---
 
 <Section text="Resume" href="resume">
-  <div class="flex flex-col items-center text-center space-y-6">
-    <div class="bg-neutral-900 px-6 py-4 rounded-xl shadow-lg max-w-2xl">
-      <p class="text-neutral-200 mb-4 text-base">
-        Want to learn more about my professional experience and qualifications?
-        Click the button below to view my resume.
+  <div class="flex flex-col items-center space-y-6 text-center">
+    <div
+      class="max-w-2xl rounded-xl border border-neutral/20 bg-[#1c232d]/75 px-6 py-4 backdrop-blur-md"
+    >
+      <p class="mb-4 text-base text-neutral-200">
+        {description}
       </p>
       <a
-        href="https://drive.google.com/file/d/1iITOyzrUZP2jqAQpbQLUm4anfDDsCUNJ/view?usp=sharing"
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-block bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold transition duration-300 ease-in-out hover:scale-105 hover:bg-primary/80 hover:shadow-lg"
+        class="inline-block rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-in-out hover:bg-primary/80"
       >
-        View My Resume
+        {label}
       </a>
     </div>
   </div>

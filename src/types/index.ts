@@ -13,6 +13,15 @@ export interface SiteContent {
   experience: ExperienceProps[];
   projects: ProjectProps[];
   about: AboutProps;
+  skills: SkillCategory[];
+  resume: ResumeProps;
+  contact: ContactProps;
+}
+
+export interface HeroLink {
+  title: string;
+  description: string;
+  href: string;
 }
 
 export interface HeroProps {
@@ -20,6 +29,12 @@ export interface HeroProps {
   specialty: string;
   summary: string;
   email: string;
+  latestWork: {
+    title: string;
+    href: string;
+    videoSrc: string;
+  };
+  links: HeroLink[];
 }
 
 export interface ExperienceProps {
@@ -35,16 +50,45 @@ export interface ProjectProps {
   summary: string;
   linkPreview?: string;
   linkSource?: string;
+  previewLabel?: string;
+  sourceLabel?: string;
   bullets?: string[];
   tech?: string[];
 }
 
 export interface AboutProps {
-  description: string;
+  paragraphs: string[];
   image: string;
+}
+
+export interface SkillCategory {
+  title: string;
+  items: string[];
+}
+
+export interface ResumeProps {
+  description: string;
+  href: string;
+  label: string;
+}
+
+export type ContactIcon = "email" | "github" | "linkedin" | "instagram";
+
+export interface ContactLink {
+  label: string;
+  href: string;
+  icon: ContactIcon;
+  external?: boolean;
+}
+
+export interface ContactProps {
+  heading: string;
+  description: string;
+  links: ContactLink[];
 }
 
 export interface HeaderProps {
   siteLogo: string;
-  navLinks: { text: string; href: string }[];
+  author: string;
+  navLinks: { text: string; href: string; external?: boolean }[];
 }

@@ -1,35 +1,99 @@
-# AstroZen - Personal Portfolio Website
+# Eashan M. Joshi — Personal Portfolio
 
-AstroZen is a minimalist, accessible and responsive portfolio template for your personal portfolio website. It is built with Astro and TailwindCSS.
+Portfolio for a **Software Engineer and AI researcher** building intelligent systems—multi-agent LLM platforms, RAG pipelines, and cloud-native production software.
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
+**Live portfolio:** [https://eashan-m-joshi.vercel.app](https://eashan-m-joshi.vercel.app)
 
-> [!NOTE]
-> The information contained in this template, including names, images, and content, is entirely fictitious and is intended solely to give the design a realistic appearance. Any coincidence with real-life people, events, or situations is purely coincidental. It is recommended that you replace this information with your own information.
+## About
 
-## 🔥 Features
+This site blends industry software engineering with AI systems work: LLMs, multi-agent orchestration, RAG/GraphRAG research, and scalable backends across fintech and enterprise platforms.
 
-- [x] Minimalist design. clean and simple
-- [x] Mobile-first responsive layout
-- [x] SEO-friendly and accessible
-- [x] Easy to customize with a single configuration file
+Education: M.S. Data Science (Rochester Institute of Technology, May 2025) and B.E. Computer Engineering (Pune Institute of Computer Technology). AWS Certified Cloud Practitioner and AWS Certified Developer – Associate. Publication at IEEE ICETC 2025 on Maven ecosystem dependency dynamics.
 
-## ✅ Lighthouse Score
+## Work experience
 
-![performance](https://github.com/user-attachments/assets/4f95e2ca-03f9-4996-9e34-dcd179194c58)
+### Tradeify
+**May 26, 2026 – Present**
 
-## 🚀 Getting Started
+Role title and description not listed yet.
 
-Clone this repository to your local machine using Git.
+### Software Developer — Chime
+**Oct 2024 – Present** · Remote, USA
 
-```scheme
-git clone https://github.com/immois/astro-zen.git
-cd astro-zen
+Smart Finance Assistant (AWS Lex/Polly), FastAPI/Flask microservices, React Native dashboards, Cognito/JWT auth, and EKS deployments.
+
+### Software Engineer — Morningstar India Pvt. Ltd.
+**Aug 2020 – Jul 2022** · MH, India
+
+Financial-data platforms, Python microservices, REST/SOAP/Azure Function APIs, React dashboards, and Azure DevOps delivery.
+
+### Software Engineer — Yardi Software India Pvt. Ltd.
+**Jun 2019 – Jul 2020** · MH, India
+
+Multi-tenant accounting backends, REST APIs, workflow automation, and PySpark/Kafka ETL.
+
+## Skills (site categories)
+
+The Skills section groups software engineering and AI expertise:
+
+- Languages
+- Frontend
+- Backend
+- AI & Machine Learning (LLMs, multi-agent systems, LangChain/LlamaIndex, RAG, vector search, MCP, and more)
+- Cloud & DevOps
+- Data & Messaging
+- Testing & Observability
+- Architecture & Engineering
+- Certifications
+
+## Publication
+
+E. M. Joshi et al., “Tracing Dependency Dynamics in the Maven Ecosystem.” IEEE ICETC 2025.
+
+- Paper: [View document](https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing)
+- Source: [GitHub](https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem)
+
+## Contact
+
+- **Email:** [eashan.m.joshi@gmail.com](mailto:eashan.m.joshi@gmail.com)
+- **LinkedIn:** [linkedin.com/in/eashanjoshi](https://www.linkedin.com/in/eashanjoshi/)
+- **GitHub:** [github.com/EashanJoshi](https://github.com/EashanJoshi)
+- **Portfolio:** [eashan-m-joshi.vercel.app](https://eashan-m-joshi.vercel.app)
+- **Instagram:** [instagram.com/eashan_joshi11](https://www.instagram.com/eashan_joshi11/)
+
+## Resume / CV
+
+Latest resume: [`public/Eashan_Joshi_Resume.pdf`](./public/Eashan_Joshi_Resume.pdf)
+
+Live URL: `https://eashan-m-joshi.vercel.app/Eashan_Joshi_Resume.pdf`
+
+## Local development
+
+Requires [Node.js](https://nodejs.org/) (v20+) and [pnpm](https://pnpm.io/).
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm install` | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
+Open [http://localhost:4321](http://localhost:4321).
+
+| Command        | Action                                 |
+| :------------- | :------------------------------------- |
+| `pnpm install` | Install dependencies                   |
+| `pnpm dev`     | Start local server at `localhost:4321` |
+| `pnpm build`   | Type-check and build to `./dist/`      |
+| `pnpm preview` | Preview the production build locally   |
+| `pnpm format`  | Format files with Prettier             |
+| `pnpm lint`    | Run ESLint                             |
+
+Site content lives in `src/config/index.ts`.
+
+## Deploy
+
+Static Astro site. Push to GitHub and connect the repo to [Vercel](https://vercel.com) (or Netlify).
+
+- Build command: `pnpm build`
+- Output directory: `dist`
+
+Based on the [AstroZen](https://github.com/immois/astro-zen) template.

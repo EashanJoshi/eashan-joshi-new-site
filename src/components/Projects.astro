@@ -7,59 +7,106 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+
+function defaultPreviewLabel(href?: string) {
+  if (!href) return "Preview";
+  if (href.includes("github.com")) return "View repo";
+  if (href.includes("drive.google.com")) return "View document";
+  return "Preview";
+}
+
+function defaultSourceLabel(href?: string) {
+  if (!href) return "Source";
+  if (href.includes("github.com")) return "Source";
+  if (href.includes("drive.google.com")) return "Notes";
+  return "Source";
+}
 ---
 
 <Section text="Projects" href="projects">
   <div class="flex flex-wrap justify-between gap-6">
     {
-      projects.map(({ name, summary, bullets, tech, linkPreview, linkSource }, index) => {
-        return (
-          <div class="w-full md:w-[48%] mb-12 rounded-2xl overflow-hidden border border-neutral/20 bg-[#1c232d]">
-            <div class="h-full p-6 flex flex-col justify-between min-h-[480px]">
-              <div>
-                <h3 class="mb-4 font-serif text-2xl font-medium text-primary">
-                  {name}
-                </h3>
-                <p class="text-base text-neutral mb-4">{summary}</p>
+      projects.map(
+        ({
+          name,
+          summary,
+          bullets,
+          tech,
+          linkPreview,
+          linkSource,
+          previewLabel,
+          sourceLabel,
+        }) => {
+          const sameLink =
+            Boolean(linkPreview) &&
+            Boolean(linkSource) &&
+            linkPreview === linkSource;
 
-                {Array.isArray(bullets) && bullets.length > 0 && (
-                  <ul class="list-disc list-inside text-sm text-neutral mb-4 space-y-1">
-                    {bullets?.map((point) => (
-                      <li>{point}</li>
-                    ))}
-                  </ul>
-                )}
+          return (
+            <div class="mb-12 w-full overflow-hidden rounded-2xl border border-neutral/20 bg-[#1c232d]/75 backdrop-blur-md md:w-[48%]">
+              <div class="flex h-full min-h-[480px] flex-col justify-between p-6">
+                <div>
+                  <h3 class="mb-4 font-serif text-2xl font-medium text-primary">
+                    {name}
+                  </h3>
+                  <p class="mb-4 text-base text-neutral">{summary}</p>
 
-                
-                {Array.isArray(tech) && tech.length > 0 && (
-                  <div class="flex flex-wrap gap-2 text-xs text-white mb-4">
-                    {tech?.map((t) => (
-                      <span class="bg-neutral-800 px-2 py-1 rounded-full">{t}</span>
-                    ))}
-                  </div>
-                )}
-              </div>
+                  {Array.isArray(bullets) && bullets.length > 0 && (
+                    <ul class="mb-4 list-inside list-disc space-y-1 text-sm text-neutral">
+                      {bullets.map((point) => (
+                        <li>{point}</li>
+                      ))}
+                    </ul>
+                  )}
 
-              <div class="flex gap-5 pt-2 text-white mt-auto">
-                <a
-                  href={linkSource}
-                  target="_blank"
-                  class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
-                >
-                  Source
-                </a>
-                <a
-                  href={linkPreview}
-                  target="_blank"
-                  class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
-                >
-                  {name === "CodeIntellect - Multi-Agent AI Systems Lab" ? "View Demo" : "View Document"}
-                </a>
+                  {Array.isArray(tech) && tech.length > 0 && (
+                    <div class="mb-4 flex flex-wrap gap-2 text-xs text-white">
+                      {tech.map((t) => (
+                        <span class="rounded-full bg-neutral-800 px-2 py-1">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                <div class="mt-auto flex gap-5 pt-2 text-white">
+                  {sameLink && linkPreview && (
+                    <a
+                      href={linkPreview}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                    >
+                      {previewLabel ?? defaultPreviewLabel(linkPreview)}
+                    </a>
+                  )}
+                  {!sameLink && linkSource && (
+                    <a
+                      href={linkSource}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                    >
+                      {sourceLabel ?? defaultSourceLabel(linkSource)}
+                    </a>
+                  )}
+                  {!sameLink && linkPreview && (
+                    <a
+                      href={linkPreview}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                    >
+                      {previewLabel ?? defaultPreviewLabel(linkPreview)}
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })
+          );
+        },
+      )
     }
   </div>
 </Section>

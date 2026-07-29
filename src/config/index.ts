@@ -4,20 +4,25 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Eashan M. Joshi",
   author: "Eashan M. Joshi",
   description:
-    "Software Engineer building intelligent, high-performance applications, ranging from backend systems and data pipelines to LLM-integrated tools and financial modeling platforms.",
+    "Software Engineer and AI researcher building intelligent, high-performance systems—from multi-agent LLM platforms and RAG pipelines to cloud-native fintech backends.",
   lang: "en",
   siteLogo: "/eashan-small.jpg",
   navLinks: [
     { text: "About", href: "#about" },
-    { text: "Resume", href: "#resume" },
+    {
+      text: "Resume",
+      href: "/Eashan_Joshi_Resume.pdf",
+      external: true,
+    },
+    { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "Skills", href: "#skills" },
-    //{ text: "Experience", href: "#experience" },
-    { text: "Contact", href: "#contact" },
+    { text: "Contact", href: "#lets-connect" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://www.linkedin.com/in/eashanjoshi/" },
     { text: "Github", href: "https://github.com/EashanJoshi" },
+    { text: "Instagram", href: "https://www.instagram.com/eashan_joshi11/" },
   ],
   socialImage: "/eashan-og.png",
   canonicalURL: "https://eashan-m-joshi.vercel.app",
@@ -26,155 +31,393 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Eashan M. Joshi",
-    specialty: "Software Engineer",
+    specialty: "Senior Software Engineer",
     summary:
-      "Software Engineer with deep expertise in AI and system design, driven by a passion for fitness and mental resilience. I build intelligent, high-performance apps, and if we’re building together, don’t be surprised  if you start optimizing your health like your code, and tune into the Huberman Lab podcast.",
+      "Software Engineer and AI builder with deep expertise in LLMs, multi-agent systems, and cloud-native backends. I ship intelligent products—from CodeIntellect’s multi-agent debugging lab to production fintech systems—and train for endurance outside the terminal.",
     email: "eashan.m.joshi@gmail.com",
-  },
-   experience: [
-//     {
-//       company: "Rochester Institute of Technology",
-//       position: "Graduate Research Assistant",
-//       startDate: "Aug 2023",
-//       endDate: "May 2025",
-//       summary: [
-//         "Architected backend infrastructure for a retrieval-augmented generation (RAG) system using Python, LLM (GPT-4), and vector search, boosting downstream task performance by 3x through context aware prompt injection",
-//         "Designed GPU pipelines with CUDA, processing 5M+ ChatGPT prompt logs from the open-source DevGPT dataset and 130M+ Maven Central dependencies and used Neo4j to uncover ecosystem patterns for IEEE ICETC research",
-//         "Developed a tool to detect multi-test data leakage in ML workflows, integrating GPT-4 for auto-fixes and testing across 100+ GitHub pipelines"
-// ,
-//       ],
-//     },
-    // {
-    //   company: "FinSharpe",
-    //   position: "Software Engineer Intern",
-    //   startDate: "May 2023",
-    //   endDate: "Aug 2023",
-    //   summary: [
-    //     "Built backend services in Python to process financial market data and support execution of rule-based trading strategies",
-    //     "Containerized and orchestrated core services using Docker and Kubernetes, reducing deployment downtime from 3 hours/month to under 15 minutes and improving system reliability",
-    //     "Integrated Python-based machine learning models to analyze high-risk securities and embed VaR-driven logic into backend pipelines, contributing to an $850,000 investment",
-    //   ],
-    // },
-    // {
-    //   company: "Yardi",
-    //   position: "Software Engineer",
-    //   startDate: "Sep 2020",
-    //   endDate: "Sep 2021",
-    //   summary: [
-    //     "Developed and maintained 80+ backend components in Python and PostgreSQL, supporting multi-tenant accounting operations across insurance, tax, and escrow workflows in production environments",
-    //     "Created SOAP/REST APIs to integrate backend services with React-based frontends, enabling seamless client-side interaction with fiduciary and compliance modules",
-    //     "Automated custom workflows and designed schema-based validation logic using Python and PostgreSQL, reducing manual effort by 60+ hours/month and improving data integrity by 15%",
-    //     "Collaborated with QA to design unit tests and integration test cases, boosting code coverage and reducing defect turnaround by 50% across trust accounting modules",
-    //     "Adopted PySpark for periodic financial data processing and reporting tasks, improving data pipeline performance and batch job reliability by streamlining ETL operations",
-    //     "Logged and resolved 60+ production issues via CRM tickets, applying root-cause debugging using PostgreSQL logs and Python profiling tools during sprint cycles"
-    //   ],
-    //},
-  ],
- projects: [
-  // {
-  //   name: "DebugMate - GenAI Software Debugging & Refactoring Assistant",
-  //   summary: "Engineered a GenAI-powered debugging tool using Retrieval-Augmented Generation (RAG) and prompt engineering, earning a 4.6/5 user rating and reducing bug resolution time by 40% across programming languages.",
-  //   bullets: [
-  //     "Built with LangChain & OpenAI",
-  //     "RAG-powered prompt injection",
-  //     "40% faster bug fixes"
-  //   ],
-  //   tech: ["Python", "LangChain", "GPT-4", "LLMs", "RAG", "Open Source"],
-  //   linkPreview: "https://drive.google.com/file/d/1EGoHrzpngKs1glMsIQ4hvR_KEcHa5NtJ/view?usp=sharing",
-  //   linkSource: "https://github.com/EashanJoshi/DebugMate-Debugging-Prompt-Enhancer",
-  // },
-  {
-  name: "CodeIntellect - Multi-Agent AI Systems Lab",
-  summary: "Built a Python, FastAPI, and React platform leveraging a multi-agent AI system for automated code debugging, critique, and ML leakage checks. Integrated this system within a stateless, containerized EKS pipeline for processing code at scale. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
-  bullets: [
-    "Deployed multi-agent AI architecture",
-    "120+ debug sessions",
-    "Excel log exports"
-  ],
-  tech: ["Python", "FastAPI", "React", "Docker", "AWS (S3, EKS)", "GPT-4", "LLMs"],
-  linkPreview: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
-  linkSource: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing"
-},
-
-{
-    name: "Graph-Based Analysis of the Maven Central Ecosystem (Open-Source Java Libraries)",
-    summary: "Performed large-scale graph analytics on 15M+ Maven package releases using Cypher and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries, with ongoing GraphRAG integration for natural language insights. Paper accepted at IEEE IC_ETC 2025.",
-    bullets: [
-    "Queried 130M+ dependency edges",
-    "Computed metrics via Goblin & Weaver",
-    "Extending to GraphRAG interface"
+    latestWork: {
+      title: "Latest work: CodeIntellect",
+      href: "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
+      videoSrc: "/Codeintellect_demo_main.mp4",
+    },
+    links: [
+      {
+        title: "LeetCode",
+        description: "Solved problems and coding progress",
+        href: "https://leetcode.com/u/eashanjoshi/",
+      },
+      {
+        title: "GeeksForGeeks",
+        description: "Institute leaderboard rank #6",
+        href: "https://www.geeksforgeeks.org/user/eashanj4/",
+      },
+      {
+        title: "Strava",
+        description: "Runs, rides, and weekly training",
+        href: "https://www.strava.com/athletes/170749275",
+      },
     ],
-    tech: ["Python", "CUDA", "Cypher", "Neo4j", "GraphRAG", "Weaver API", "Graph Theory", "Open Source"],
-    linkPreview: "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
-    linkSource: "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
   },
-
-  {
-  name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
-  summary: "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT-4) to generate context-aware fix suggestions and automate corrections.",
-  bullets: [
-    "Flags leakage patterns",
-    "Suggests fix strategies",
-    "v1.2: LLM-powered auto-fixes",
-    
+  experience: [
+    {
+      company: "Tradeify",
+      position: "Senior Full Stack Engineer",
+      startDate: "May 2026",
+      endDate: "Present",
+      summary: [],
+    },
+    {
+      company: "Chime",
+      position: "Software Developer",
+      startDate: "Oct 2024",
+      endDate: "Present",
+      summary: [
+        "Worked on Smart Finance Assistant using AWS Lex and Polly for NLP and text-to-speech, delivering personalized banking insights with Product, Data Science, and Compliance teams.",
+        "Built secure backend microservices (TransactionService and AccountService) in Python (FastAPI, Flask) with PostgreSQL and Redis; integrated UserProfile and Payments APIs for low-latency processing.",
+        "Created a React Native dashboard with Redux Toolkit and React Query to monitor model accuracy, engagement metrics, and conversation flows.",
+        "Implemented AWS Cognito and JWT-based RBAC with SSO for internal tools, supporting SOC 2, PCI-DSS, and FAPI compliance.",
+        "Shipped CI/CD with GitHub Actions and Jenkins, SonarQube analysis, and automated testing with Pytest, JaCoCo, and Cypress.",
+        "Containerized services with Docker on AWS EKS (Helm), enabled Kafka event-driven flows, and added Prometheus/Grafana observability.",
+      ],
+    },
+    {
+      company: "Morningstar India Pvt. Ltd.",
+      position: "Software Engineer",
+      startDate: "Aug 2020",
+      endDate: "Jul 2022",
+      summary: [
+        "Built enterprise financial-data systems in Python and Flask, improving API response time by 35% on Morningstar’s investment research platform.",
+        "Developed microservices with Flask, FastAPI, Celery, and Redis for ingestion, validation, auth, and logging across high-volume datasets.",
+        "Designed REST, SOAP, and Azure Function APIs for investor insights and dashboards, reducing manual intervention by 50%.",
+        "Shipped React.js analytics dashboards that improved engagement by 30% and cut support tickets by 25%.",
+        "Optimized Oracle SQL/PL-SQL and Azure SQL access with indexing and encryption, reducing latency by 45%.",
+        "Led pytest/Postman/Selenium/JMeter coverage via Azure DevOps (90% coverage) and Docker/Helm releases with 99.9% uptime.",
+      ],
+    },
+    {
+      company: "Yardi Software India Pvt. Ltd.",
+      position: "Software Engineer",
+      startDate: "Jun 2019",
+      endDate: "Jul 2020",
+      summary: [
+        "Developed and maintained 80+ Python/PostgreSQL backend components for multi-tenant insurance, tax, and escrow accounting workflows.",
+        "Built REST APIs bridging backend systems with React frontends across fiduciary, compliance, and trust accounting modules.",
+        "Automated workflows with Python, Redis, and schema validation, saving 60+ hours/month and improving data integrity by 15%.",
+        "Partnered with QA on unit/integration suites, cutting defect turnaround by 50%.",
+        "Used PySpark and Kafka to strengthen financial ETL reliability and reporting.",
+      ],
+    },
   ],
-  tech: ["Python", "GPT-4", "LLMs", "Scikit-learn"],
-  linkPreview: "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
-  linkSource: "https://github.com/EashanJoshi/DataLeakage",
-},
-
-  {
-  name: "Information Retrieval with Vector Embeddings for Bugzilla Reports (Open-Source)",
-  summary: "Developed a full-stack pipeline to measure CRM ticket and bug report similarity using BM25, LDA+GloVe, and Siamese CNNs across Eclipse, Firefox, and Mobile datasets.",
-  bullets: [
-    "Preprocessed bug report data",
-    "Applied BM25 & LDA+GloVe",
-    "Trained domain-specific Siamese CNN"
+  projects: [
+    {
+      name: "CodeIntellect - Multi-Agent AI Systems Lab",
+      summary:
+        "Built a Python, FastAPI, and React platform leveraging a multi-agent AI system for automated code debugging, critique, and ML leakage checks. Integrated this system within a stateless, containerized EKS pipeline for processing code at scale. Added logging and Excel exports for full auditability across 120+ code sessions. Reduced manual debugging by ~2 hours/session through intelligent agent collaboration and classification.",
+      bullets: [
+        "Deployed multi-agent AI architecture",
+        "120+ debug sessions",
+        "Excel log exports",
+      ],
+      tech: [
+        "Python",
+        "FastAPI",
+        "React",
+        "Docker",
+        "AWS (S3, EKS)",
+        "GPT-4",
+        "LLMs",
+      ],
+      linkPreview:
+        "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
+      linkSource:
+        "https://drive.google.com/file/d/1M7IAAqdmXa3HPyzMt-RB90UEvGe3jr8c/view?usp=sharing",
+      previewLabel: "View demo",
+      sourceLabel: "Demo & notes",
+    },
+    {
+      name: "Graph-Based Analysis of the Maven Central Ecosystem",
+      summary:
+        "Performed large-scale graph analytics on 15M+ Maven package releases using Cypher and Neo4j to study dependency evolution, versioning cadence, and ecosystem risk patterns in open-source Java libraries, with ongoing GraphRAG integration for natural language insights. Paper accepted at IEEE IC_ETC 2025.",
+      bullets: [
+        "Queried 130M+ dependency edges",
+        "Computed metrics via Goblin & Weaver",
+        "Extending to GraphRAG interface",
+      ],
+      tech: [
+        "Python",
+        "CUDA",
+        "Cypher",
+        "Neo4j",
+        "GraphRAG",
+        "Weaver API",
+        "Graph Theory",
+        "Open Source",
+      ],
+      linkPreview:
+        "https://drive.google.com/file/d/1JtBgr1S6ZlkuFrPmkicmcwhi-oORWC26/view?usp=sharing",
+      linkSource:
+        "https://github.com/EashanJoshi/Graph-Based-Analysis-of-the-Maven-Central-Ecosystem",
+      previewLabel: "View paper",
+      sourceLabel: "Source",
+    },
+    {
+      name: "Detecting and Recommending Fixes for Multi-Test Data Leakage in Machine Learning Pipelines",
+      summary:
+        "Built a Python-based tool to detect multi-test leakage in machine learning workflows, enhancing model reliability by flagging common pipeline flaws like preprocessing before train-test split. Currently working on version 1.2 which will integrate LLMs (via GPT-4) to generate context-aware fix suggestions and automate corrections.",
+      bullets: [
+        "Flags leakage patterns",
+        "Suggests fix strategies",
+        "v1.2: LLM-powered auto-fixes",
+      ],
+      tech: ["Python", "GPT-4", "LLMs", "Scikit-learn"],
+      linkPreview:
+        "https://drive.google.com/file/d/1NOMVlR8y-azXHbp6_6LHglqu63hR70_g/view?usp=sharing",
+      linkSource: "https://github.com/EashanJoshi/DataLeakage",
+      previewLabel: "View write-up",
+      sourceLabel: "Source",
+    },
+    {
+      name: "Information Retrieval with Vector Embeddings for Bugzilla Reports",
+      summary:
+        "Developed a full-stack pipeline to measure CRM ticket and bug report similarity using BM25, LDA+GloVe, and Siamese CNNs across Eclipse, Firefox, and Mobile datasets.",
+      bullets: [
+        "Preprocessed bug report data",
+        "Applied BM25 & LDA+GloVe",
+        "Trained domain-specific Siamese CNN",
+      ],
+      tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
+      linkPreview:
+        "https://drive.google.com/file/d/15HPCIsCgWop5m4rl_o_VZLyoW1ppQsQR/view?usp=sharing",
+      linkSource:
+        "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
+      previewLabel: "View write-up",
+      sourceLabel: "Source",
+    },
+    {
+      name: "Options Pricing Models",
+      summary:
+        "Implements advanced pricing models for European and American call options with live data, sensitivity analysis, and ML predictions—designed for robust quantitative finance analysis.",
+      bullets: [
+        "Black-Scholes, binomial trees",
+        "Live market data feed",
+        "ML-based volatility prediction",
+      ],
+      tech: ["Python", "yfinance", "Black-Scholes", "binomial trees", "Greeks"],
+      linkPreview: "https://github.com/EashanJoshi/Options-Pricing-Models",
+      linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
+      previewLabel: "View repo",
+      sourceLabel: "Source",
+    },
   ],
-  tech: ["Python", "TensorFlow", "GloVe", "BM25", "LDA"],
-  linkPreview: "https://drive.google.com/file/d/15HPCIsCgWop5m4rl_o_VZLyoW1ppQsQR/view?usp=sharing",
-  linkSource: "https://github.com/EashanJoshi/Duplicate-Bug-Report-Detection-using-Siamese-Convolutional-Neural-Network",
-},
-
-{
-    name: "Options Pricing Models",
-    summary: "Implements advanced pricing models for European and American call options with live data, sensitivity analysis, and ML predictions—designed for robust quantitative finance analysis.",
-    bullets: [
-      "Black-Scholes, binomial trees",
-      "Live market data feed",
-      "ML-based volatility prediction"
-    ],
-    tech: ["Python", "yfinance", "Black-Scholes", "binomial trees", "Greeks"],
-    linkPreview: "https://github.com/EashanJoshi/Options-Pricing-Models",
-    linkSource: "https://github.com/EashanJoshi/Options-Pricing-Models",
-  },
-//   {
-//   name: "Multiclass Image Classification with Deep CNN (Tiny ImageNet)",
-//   summary: "Trained a deep convolutional neural network (DCNN) on Tiny ImageNet for multiclass image classification, achieving category-wise insights using TensorFlow and GPU-optimized workflows.",
-//   bullets: [
-//     "Built DCNN in TensorFlow",
-//     "Preprocessed Tiny ImageNet data",
-//     "Analyzed class-wise accuracy patterns"
-//   ],
-//   tech: ["Python", "TensorFlow", "CNN", "Tiny ImageNet"],
-//   linkPreview: "https://drive.google.com/file/d/1YnzIxTJ1WGjHB0Vv9OXfHNhMIDfyQQeh/view?usp=sharing",
-//   linkSource: "https://github.com/EashanJoshi/Image-Classification-DCNN",
-// },
-
-  
-],
-
-
   about: {
-    description: `
-      <p> Hi, I’m Eashan Joshi, a driven Software Engineer and AI Researcher passionate about building intelligent, high-performance systems. I hold a <strong> Master’s Degree in Data Science from Rochester Institute of Technology (May 2025) and a Bachelor’s Degree in Computer Engineering from Pune Institute of Computer Technology.</strong> </p> <br />
-      <p> With hands-on experience in developing scalable backend services, LLM-integrated applications, and cloud-native infrastructures, I specialize in creating robust tools that blend performance with innovation. From financial technology to intelligent debugging platforms, my work spans multiple domains and leverages cutting-edge frameworks like LangChain, CUDA, PySpark, and Neo4j.</p><br />
-
-      <p> I thrive at the intersection of AI and Software Engineering, designing GPU-accelerated pipelines, deploying cloud-native systems, and analyzing open-source ecosystems. Outside of tech, I’m a fitness enthusiast and endurance athlete who trains hard and stays curious through health science podcasts.</p>
-
-    `,
+    paragraphs: [
+      "Hi, I’m Eashan Joshi—a Software Engineer and AI researcher passionate about building intelligent, high-performance systems. I hold a Master’s in Data Science from Rochester Institute of Technology (May 2025) and a Bachelor’s in Computer Engineering from Pune Institute of Computer Technology.",
+      "My work sits at the intersection of software engineering and AI: multi-agent LLM systems like CodeIntellect, RAG and vector-search pipelines, GraphRAG research on Maven Central (IEEE ICETC 2025), and production backends across fintech and enterprise platforms at Tradeify, Chime, Morningstar, and Yardi.",
+      "I specialize in scalable services, LLM-integrated tools, and cloud-native infrastructure—using stacks like LangChain, FastAPI, Neo4j, CUDA, PySpark, and AWS/Azure. Outside of tech, I’m a fitness enthusiast and endurance athlete who stays curious through health science podcasts.",
+    ],
     image: "/eashan-big.jpg",
   },
+  skills: [
+    {
+      title: "Languages",
+      items: [
+        "Python",
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "Kotlin",
+        "SQL",
+        "C++",
+        "C#",
+        "Go",
+        "R",
+        "HTML5",
+        "CSS3",
+      ],
+    },
+    {
+      title: "Frontend",
+      items: [
+        "React",
+        "React Native",
+        "Redux Toolkit",
+        "React Query",
+        "Angular",
+        "Vue.js",
+        "Tailwind CSS",
+        "Bootstrap",
+      ],
+    },
+    {
+      title: "Backend",
+      items: [
+        "FastAPI",
+        "Flask",
+        "Django",
+        "Node.js",
+        "Express.js",
+        "Spring Boot",
+        "Celery",
+        "REST APIs",
+        "SOAP",
+        "GraphQL",
+        "Microservices",
+      ],
+    },
+    {
+      title: "AI & Machine Learning",
+      items: [
+        "LLMs",
+        "Multi-agent systems",
+        "LangChain",
+        "LlamaIndex",
+        "LangGraph",
+        "RAG",
+        "GraphRAG",
+        "OpenAI APIs",
+        "GPT models",
+        "LLaMA",
+        "Claude",
+        "TensorFlow",
+        "PyTorch",
+        "scikit-learn",
+        "NLP",
+        "BERT",
+        "RoBERTa",
+        "spaCy",
+        "Vector embeddings",
+        "Pinecone",
+        "FAISS",
+        "Prompt engineering",
+        "Model Context Protocol",
+        "CUDA",
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      items: [
+        "AWS",
+        "EKS",
+        "S3",
+        "Lambda",
+        "API Gateway",
+        "Cognito",
+        "Fargate",
+        "CloudWatch",
+        "X-Ray",
+        "CodePipeline",
+        "CodeBuild",
+        "Azure",
+        "AKS",
+        "Azure DevOps",
+        "GCP",
+        "Docker",
+        "Kubernetes",
+        "Helm",
+        "Terraform",
+        "Ansible",
+        "Jenkins",
+        "GitHub Actions",
+        "GitLab CI/CD",
+        "CI/CD pipelines",
+      ],
+    },
+    {
+      title: "Data & Messaging",
+      items: [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Cassandra",
+        "Redis",
+        "Apache Kafka",
+        "Apache Flink",
+        "Apache Spark",
+        "PySpark",
+        "Neo4j",
+        "Elasticsearch",
+        "Oracle SQL",
+        "PL/SQL",
+        "Firebase",
+      ],
+    },
+    {
+      title: "Testing & Observability",
+      items: [
+        "Pytest",
+        "JUnit",
+        "TestNG",
+        "Mockito",
+        "Cypress",
+        "Selenium",
+        "Postman",
+        "Swagger",
+        "SonarQube",
+        "JaCoCo",
+        "JMeter",
+        "Prometheus",
+        "Grafana",
+      ],
+    },
+    {
+      title: "Architecture & Engineering",
+      items: [
+        "Event-driven architecture",
+        "Serverless architecture",
+        "Domain-driven design",
+        "MVC",
+        "Repository pattern",
+        "Dependency injection",
+        "Design patterns",
+        "Distributed systems",
+        "API design",
+        "Secure authentication",
+        "JWT",
+        "RBAC",
+        "SSO",
+      ],
+    },
+    {
+      title: "Certifications",
+      items: [
+        "AWS Certified Cloud Practitioner",
+        "AWS Certified Developer – Associate",
+      ],
+    },
+  ],
+  resume: {
+    description:
+      "Want the full picture of my experience and qualifications? View my latest resume.",
+    href: "/Eashan_Joshi_Resume.pdf",
+    label: "View my resume",
+  },
+  contact: {
+    heading: "Let’s Connect",
+    description: "Reach out for collaboration, questions, or just to say hi.",
+    links: [
+      {
+        label: "Email",
+        href: "mailto:eashan.m.joshi@gmail.com",
+        icon: "email",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/EashanJoshi",
+        icon: "github",
+        external: true,
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/eashanjoshi/",
+        icon: "linkedin",
+        external: true,
+      },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/eashan_joshi11/",
+        icon: "instagram",
+        external: true,
+      },
+    ],
+  },
 };
-
-// #5755ff

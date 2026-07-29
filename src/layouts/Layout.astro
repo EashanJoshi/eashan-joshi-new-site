@@ -1,5 +1,6 @@
 ---
 import Header from "@components/Header.astro";
+import FintechBackground from "@components/FintechBackground.astro";
 import "@fontsource/be-vietnam-pro";
 import "@fontsource-variable/gabarito";
 import { SITE_CONFIG } from "@config";
@@ -19,36 +20,58 @@ const {
 
 const ogImgUrl = new URL(socialImage, SITE_CONFIG.canonicalURL).href;
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: author,
+  url: canonicalURL,
+  jobTitle: "Senior Software Engineer",
+  description,
+  image: ogImgUrl,
+  email: "mailto:eashan.m.joshi@gmail.com",
+  sameAs: socialLinks.map((link) => link.href),
+};
 ---
 
 <!doctype html>
-<html lang={lang} class="scroll-pt-16 scroll-smooth">
+<html lang={lang} class="scroll-pt-16 scroll-smooth bg-[#151d2b]">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalURL} />
 
+    <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImgUrl} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={ogImgUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImgUrl} />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />
   </head>
 
-  <body class="bg-black font-sans">
-    <Header siteLogo={siteLogo} navLinks={navLinks} />
-    <main class="w-full">
-      <slot />
-    </main>
-    <Footer author={author} socialLinks={socialLinks} />
+  <body class="page-root relative isolate overflow-x-hidden bg-transparent font-sans">
+    <FintechBackground />
+    <div class="page-content relative z-[1]">
+      <Header siteLogo={siteLogo} author={author} navLinks={navLinks} />
+      <main class="w-full bg-transparent">
+        <slot />
+      </main>
+      <Footer author={author} socialLinks={socialLinks} />
+    </div>
   </body>
 </html>
