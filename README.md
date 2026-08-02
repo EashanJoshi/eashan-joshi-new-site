@@ -12,13 +12,17 @@ Education: M.S. Data Science (Rochester Institute of Technology, May 2025) and B
 
 ## Work experience
 
-### Tradeify
-**May 26, 2026 – Present**
+### Senior Full Stack Engineer — Tradeify
+**May 2026 – Present** · Miami, USA
 
-Role title and description not listed yet.
+- Built the crypto trader frontend using Next.js, TypeScript, Material UI, Redux Toolkit, and TanStack Query across 25+ pages
+- Led the Worthy-to-BridgerPay migration with a provider-agnostic tokenization layer
+- Drove QA validation of the crypto admin console and documented 20+ pre-launch defects
+- Developed Python risk-exposure calculations and Celery automation for the futures backend
+- Authored architecture documentation and consolidated 8 duplicated payment-input implementations
 
 ### Software Developer — Chime
-**Oct 2024 – Present** · Remote, USA
+**May 2025 – May 2026** · Remote, USA
 
 Smart Finance Assistant (AWS Lex/Polly), FastAPI/Flask microservices, React Native dashboards, Cognito/JWT auth, and EKS deployments.
 

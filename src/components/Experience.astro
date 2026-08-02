@@ -13,7 +13,8 @@ const { experience } = Astro.props;
   experience && experience.length > 0 && (
     <Section text="Work Experience" href="experience">
       <div class="space-y-6">
-        {experience.map(({ company, position, startDate, endDate, summary }) => {
+        {experience.map(
+          ({ company, position, startDate, endDate, location, summary }) => {
           const hasPosition = Boolean(position?.trim());
           const summaryItems = Array.isArray(summary)
             ? summary.filter((item) => Boolean(item?.trim()))
@@ -45,6 +46,7 @@ const { experience } = Astro.props;
                 )}
                 <span class="pb-[2px] text-sm text-white/70">
                   {startDate} – {endDate}
+                  {location ? ` | ${location}` : ""}
                 </span>
               </div>
               {hasSummary && (
@@ -58,7 +60,8 @@ const { experience } = Astro.props;
               )}
             </div>
           );
-        })}
+        },
+        )}
       </div>
     </Section>
   )
