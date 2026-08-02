@@ -12,15 +12,21 @@ const { siteLogo, author, navLinks } = Astro.props;
   id="site-header"
   class="site-header sticky top-0 z-50 mx-auto flex w-full max-w-5xl justify-between border-b border-neutral/15 bg-[#1c232d]/90 px-5 py-6 backdrop-blur-md"
 >
-  <a href="/" class="flex items-center gap-3" aria-label="Home link">
+  <a
+    href="/"
+    class="flex min-w-0 shrink items-center gap-2 sm:gap-3"
+    aria-label="Home link"
+  >
     <Image
-      class="rounded-full"
+      class="size-8 shrink-0 rounded-full sm:size-[45px]"
       src={siteLogo}
       width="45"
       height="45"
       alt="website logo"
     />
-    <span class="hidden text-sm font-medium tracking-tight text-white sm:inline sm:text-base">
+    <span
+      class="whitespace-nowrap text-xs font-medium tracking-tight text-white sm:text-base"
+    >
       {author}
     </span>
   </a>
@@ -28,7 +34,7 @@ const { siteLogo, author, navLinks } = Astro.props;
   <button
     type="button"
     id="menu-button"
-    class="px-1.5 text-neutral sm:hidden"
+    class="shrink-0 px-1.5 text-neutral sm:hidden"
     aria-label="Open navigation menu"
     aria-expanded="false"
     aria-controls="main-menu"
